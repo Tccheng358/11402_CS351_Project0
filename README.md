@@ -1,6 +1,5 @@
 ## Planning & Strategy: Two Sum
 
-## Requirements
 • Two Sum
     cannot use the same element twice.
 
@@ -9,8 +8,8 @@
 - Use **std:: vector<int>** for the input array and result storage.
 
 - Provide two solution implementations:
-    - **TwoSumArray **: a direct array-based approach.
-    - ** TwoSumHashTable'**: a hash-table-based approach using the STL.
+    - **TwoSumArray**: a direct array-based approach.
+    - **TwoSumHashTable**: a hash-table-based approach using the STL.
 
 - Each implenentation should:
     - accept an integer array and a target value,
