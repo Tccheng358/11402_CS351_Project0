@@ -1,2 +1,2 @@
-# Main Program to to call the Two Sum Function
+//Main Program to to call the Two Sum Function
 #include <iostream>
