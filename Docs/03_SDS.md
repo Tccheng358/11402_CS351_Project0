@@ -1,37 +1,44 @@
 
 # Software Design Specification (SDS)
 
-## Overview
-This document describes the design of a Two Sum solution using both array and hashtable approaches.
+## 1. Overview
+This document describes the design of a Two Sum problem solver application written in C++.
 
-## Problem Statement
-Implement a function that finds two numbers in an array that add up to a target sum and returns their indices.
+## 2. System Architecture
+The application consists of two main components:
+- **main.cpp**: Entry point and user interface
+- **twosum.cpp**: Core algorithm implementation
 
-## Design Approach
+## 3. Components
 
-### Approach 1: Array (Brute Force)
-- **Algorithm**: Nested loop
-- **Time Complexity**: O(n²)
-- **Space Complexity**: O(1)
-- **Description**: Compare each element with all other elements to find the pair
+### 3.1 Main Module (main.cpp)
+**Purpose**: Program entry point and user interaction
+- Handles input/output operations
+- Calls the Two Sum solver function
+- Manages program flow
 
-### Approach 2: Hashtable
-- **Algorithm**: Hash map lookup
+### 3.2 Two Sum Module (twosum.cpp)
+**Purpose**: Core problem-solving logic
+- Implements algorithm to find two numbers that sum to a target value
+- Returns indices or values of matching pair
+- Optimized for performance
+
+## 4. Data Structures
+- Array/Vector for input numbers
+- Hash map for O(1) lookup (if hash-based approach used)
+
+## 5. Algorithm
+- **Approach**: Hash map or two-pointer technique
 - **Time Complexity**: O(n)
 - **Space Complexity**: O(n)
-- **Description**: Use a hash table to store values and their indices for constant-time lookup
 
-## Function Signature
+## 6. Interfaces
+
+### Function Signature
+```cpp
+vector<int> twoSum(vector<int>& nums, int target);
 ```
-twoSum(arr: int[], target: int) -> int[]
-```
 
-## Key Components
-- Input validation
-- Data structure selection (array vs hashtable)
-- Index tracking and return format
-- Error handling for edge cases
-
-## Trade-offs
-- Array approach: Simple, no extra space, slower execution
-- Hashtable approach: Fast lookup, requires additional memory
+## 7. Testing
+- Unit tests for various input cases
+- Edge cases (empty array, no solution, duplicates)
