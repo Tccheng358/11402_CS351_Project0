@@ -66,9 +66,9 @@ This document links project requirements to design elements, source code, and ve
 
 | Verification Area | Current State |
 |---|---|
-| Unit tests | Planned in `Docs/04_test_plan.md`; no test source files exist in `tests/` |
+| Unit tests | Defined in `Docs/04_test_plan.md`; no test source files exist in `tests/` |
 | Integration tests | Planned in `Docs/04_test_plan.md`; not implemented |
-| Acceptance tests | `Docs/05_acceptance_tests.md` is empty |
+| Acceptance tests | Defined in `Docs/05_acceptance_tests.md`; execution evidence mostly pending |
 | CI checks | Not configured (`.github/workflows/` not present) |
 | Docker verification | Not configured (`Dockerfile` not present) |
 | Manual execution | Demonstrated through `main.cpp` with sample input |
@@ -77,14 +77,14 @@ This document links project requirements to design elements, source code, and ve
 
 ### Open Gaps
 1. No implemented automated tests to verify FR/NFR coverage.
-2. No acceptance test definitions.
+2. Acceptance scenarios are documented, but most are not yet executed with recorded evidence.
 3. No CI workflow for build and tests.
 4. No Docker artifacts for reproducible build/test.
 5. No explicit input validation for array size constraints.
 
 ### Recommended Next Actions
 1. Add unit tests for all SRS test categories (positive, negative, zero, duplicates, small input sizes, not-found case).
-2. Populate `Docs/05_acceptance_tests.md` with scenario-based acceptance criteria.
+2. Execute and record results for all acceptance scenarios defined in `Docs/05_acceptance_tests.md`.
 3. Add GitHub Actions workflow to compile and run tests on push/pull request.
 4. Add Dockerfile to build and execute tests in a container.
 5. Optionally add explicit precondition checks (`nums.size() >= 2`) and define behavior on invalid input.

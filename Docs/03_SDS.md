@@ -20,7 +20,7 @@ The application consists of two main components:
 ### 3.2 Two Sum Module (twosum.cpp)
 **Purpose**: Core problem-solving logic
 - Implements algorithm to find two numbers that sum to a target value
-- Returns indices or values of matching pair
+- Returns indices of a matching pair
 - Optimized for performance
 
 ## 4. Data Structures
@@ -28,15 +28,17 @@ The application consists of two main components:
 - Hash map for O(1) lookup (if hash-based approach used)
 
 ## 5. Algorithm
-- **Approach**: Hash map or two-pointer technique
-- **Time Complexity**: O(n)
-- **Space Complexity**: O(n)
+- **Approach A (twoSumArray)**: Brute-force nested loops
+- **Approach B (twoSumHashMap)**: Single pass hash map lookup
+- **Time Complexity**: O(n²) for array approach, O(n) for hash map approach
+- **Space Complexity**: O(1) for array approach, O(n) for hash map approach
 
 ## 6. Interfaces
 
 ### Function Signature
 ```cpp
-vector<int> twoSum(vector<int>& nums, int target);
+vector<int> twoSumArray(vector<int>& nums, int target);
+vector<int> twoSumHashMap(vector<int>& nums, int target);
 ```
 
 ## 7. Testing

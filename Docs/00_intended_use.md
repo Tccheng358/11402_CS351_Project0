@@ -21,11 +21,11 @@ The tool is intended to: demonstrate and compare two approaches to solving the T
 - Target sum value
 
 **Output(s):** 
-- Indices or values of the two numbers that sum to target
-- Performance metrics (execution time, comparisons)
+- Indices of the two numbers that sum to target
+- Or an explicit "not found" behavior when no pair exists
 
 **Execution environment:** 
-- CLI on Windows/Linux/macOS with C++23 compiler support
+- CLI on Windows/Linux/macOS with C++20 compiler support
 
 ## 4. Success Criteria
 **Functional success:** 
@@ -38,7 +38,7 @@ The tool is intended to: demonstrate and compare two approaches to solving the T
 - Deterministic, reproducible results
 
 ## 5. Constraints
-**Language:** C++23 (STL)
+**Language:** C++20 (STL)
 
 **Time/Scope constraints:** 
 - Complete by project deadline
