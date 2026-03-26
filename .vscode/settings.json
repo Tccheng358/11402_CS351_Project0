@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
-=======
   "jira-plugin.workingProject": "",
->>>>>>> 0fefb6b957bcb84bbb8bde0926f3ee4a957d470b
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",

@@ -1,5 +1,4 @@
-// Main Program to call the Two Sum Function
-// Main Program to call the Two Sum Functions
+//Main Program to to call the Two Sum Function
 #include <iostream>
 #include <vector>
 
