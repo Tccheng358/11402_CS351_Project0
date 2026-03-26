@@ -1,61 +1,47 @@
 # Intended Use / Problem Definition
 
 ## 1. Problem Statement
-**What problem does this tool solve?**
-This project implements solutions to the Two Sum problem: given an array of integers and a target sum, find two numbers that add up to the target.
-
-**Who is the user?**
-Computer science students learning data structures and algorithm optimization techniques.
+- What problem does this tool solve?
+	The tool solves the Two Sum problem by finding two indices in an integer array whose values add up to a target value.
+- Who is the user (developer, analyst, student, etc.)?
+	Primary users are computer science students and beginner developers learning algorithm design and complexity trade-offs.
 
 ## 2. Intended Use
-The tool is intended to: demonstrate and compare two approaches to solving the Two Sum problem—a brute force solution and an optimized hash table implementation. It serves as an educational resource for understanding trade-offs between time complexity and space complexity.
-
-**The tool is NOT intended to:**
-- Serve as production-grade code
-- Handle non-integer inputs or edge cases beyond scope
-- Replace comprehensive algorithm textbooks
+- The tool is intended to: demonstrate and compare two C++ implementations of Two Sum (array brute force and hash-table approach). It is intended for coursework, learning, and basic functional validation.
+- The tool is NOT intended to: serve as production-grade software, provide full CLI product features, or replace comprehensive algorithm references.
 
 ## 3. Inputs / Outputs (high level)
-**Input(s):** 
-- Array of integers
-- Target sum value
-
-**Output(s):** 
-- Indices or values of the two numbers that sum to target
-- Performance metrics (execution time, comparisons)
-
-**Execution environment:** 
-- CLI on Windows/Linux/macOS with C++23 compiler support
+- Input(s):
+	- Integer array (`std::vector<int>`)
+	- Integer target value
+- Output(s):
+	- Pair of indices that satisfy the target sum, or an empty result when no pair exists
+	- Console output from the sample driver in `Src/main.cpp`
+- Execution environment: Windows/Linux/macOS terminal (CLI), compiled C++ application
 
 ## 4. Success Criteria
-**Functional success:** 
-- Correctly identifies two numbers summing to target
-- Returns valid indices/values or appropriate "not found" message
-
-**Quality success:** 
-- All unit tests pass
-- Hash table solution outperforms brute force on large inputs
-- Deterministic, reproducible results
+- Functional success: returns correct indices for required scenarios (basic, negative values, duplicates, zero, and no-solution case).
+- Quality success: deterministic output for the same input, documentation and traceability are complete, and test/acceptance checks pass when executed.
 
 ## 5. Constraints
-**Language:** C++23 (STL)
+- Language: C++23 (STL)
+- Time/Scope constraints:
+	- Focus only on Two Sum with two implementations (array and hash table)
+	- Complete documentation, traceability, and validation within project deadline
+- External dependency policy:
+	- Use only the C++ standard library (STL)
+	- No third-party runtime dependencies
 
-**Time/Scope constraints:** 
-- Complete by project deadline
-- Focus on two primary algorithms only
-
-**External dependency policy:** 
-- STL libraries only; no third-party dependencies
-
-## 6. Risks / Assumptions
-**Key assumptions:**
-- Exactly one valid pair exists (or none)
-- Input array is not empty
-
-**Main risks:**
-- Integer overflow with large target sums
-- Memory constraints with very large arrays
-
-**Mitigations:**
-- Input validation and bounds checking
-- Document limitations in README
+## 6. Risks / Assumptions (lightweight)
+- Key assumptions:
+	- Input values are valid integers
+	- At most one required solution is expected per scenario
+	- Input size is at least two for normal operation
+- Main risks:
+	- Integer overflow for extreme values
+	- Missing automated tests can allow regressions
+	- No CI/container setup yet reduces reproducibility
+- Mitigations:
+	- Add explicit input guards and edge-case checks
+	- Implement and run automated tests for all documented cases
+	- Add CI workflow and Docker-based build/test path
